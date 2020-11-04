@@ -17,8 +17,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install AdoptOpenJDK ${{matrix.java}}
-        uses: AdoptOpenJDK/install-jdk@v1
-        with:
-          version: ${{matrix.java}}
+      uses: AdoptOpenJDK/install-jdk@v1
+      with:
+        version: ${{matrix.java}}
     - name: Run tests
       run: sbt test
